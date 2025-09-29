@@ -19,11 +19,11 @@ test('Clear completed todos and verify the others', async ({ page }) => {
   // Complete at least one task
   await page.getByRole('listitem').filter({ hasText: 'task1' }).getByLabel('Toggle Todo').check();
 
-  const completedTodos = await page.locator("//label[@data-testid='todo-title']/../../../li[(@class='completed')]");
+  const completedTodos = page.locator("//label[@data-testid='todo-title']/../../../li[(@class='completed')]");
   await expect(completedTodos).toHaveCount(1); 
 
   // Verify that the "Clear completed" button is visible
-  const visibleButton = await page.getByRole('button', { name: "Clear completed"}).isVisible();
+  await page.getByRole('button', { name: "Clear completed"}).isVisible();
 
   //  Click the "Clear completed" button
   await page.getByRole('button', { name: "Clear completed" }).click();
@@ -32,6 +32,6 @@ test('Clear completed todos and verify the others', async ({ page }) => {
   await expect(completedTodos).toHaveCount(0);
 
   // Verify that active tasks remain
-  const noncompletedTodos = await page.locator("//label[@data-testid='todo-title']/../../../li[not(@class='completed')]");
+  const noncompletedTodos = page.locator("//label[@data-testid='todo-title']/../../../li[not(@class='completed')]");
   await expect(noncompletedTodos).toHaveCount(2);
 });
