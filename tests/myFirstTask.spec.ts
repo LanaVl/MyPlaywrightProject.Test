@@ -1,10 +1,4 @@
-/* ## Task 2: Write a New Test for "Clear Completed" Button
-
-- Create a package.json script called `test:test2` that:
-  - Runs your new test
-  - Executes on **Chromium and Firefox** browsers
-  - Uses **2 workers** for parallel execution
-  - Can be run with: `npm run test:test2` */
+// Task 2: Write a New Test for "Clear Completed" Button 
 
 import {test, expect} from "@playwright/test"
 
