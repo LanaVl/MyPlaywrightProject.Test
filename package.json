@@ -3,17 +3,22 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test:test2": "playwright test myFirstTask.spec.ts --project=chromium --project=firefox --workers=2",
+    "test": "playwright test tests/finalTask.spec.ts --project=chromium --project=firefox --workers=2 --headed",
     "test:ui": "playwright test --ui",
     "report": "npx playwright show-report"
   },
- 
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "module",
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.55.0",
     "@types/node": "^24.5.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "force": "^0.0.3",
+    "save-dev": "^0.0.1-security"
   }
 }

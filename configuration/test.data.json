@@ -1,0 +1,45 @@
+{
+  "categories": {
+    "electronics": "Electronics",
+    "camera": "Camera & photo",
+    "cellphones": "Cell phones",
+    "computers": "Computers",
+    "notebooks": "Notebooks"
+  },
+
+  "brands": {
+    "apple": {
+    "slug": "apple",
+    "name": "Apple iCam"
+  },
+  "nikon": {
+    "slug": "nikon",
+    "name": "Nikon D5500 DSLR"
+  }
+},
+
+  "sortingOptions": {
+    "nameAZ": "Name: A to Z",
+    "nameZA": "Name: Z to A",
+    "priceLH": "Price: Low to High",
+    "priceHL": "Price: High to Low",
+    "createdOn": "Created on"
+  },
+
+  "positionOnPage": {
+    "Three": "3",
+    "Six": "6",
+    "Nine": "9"
+  },
+
+  "memorySize": {
+    "min": "4 GB",
+    "middle": "8 GB",
+    "max": "16 GB"
+  },
+
+  "currency": {
+    "euro": "Euro",
+    "USD": "US Dollar"
+  }
+}

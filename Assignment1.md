@@ -1,4 +1,4 @@
-// Run tests for a single browser
+// Run tests for Google Chrome only
 npx playwright test --project=chromium
 
 // Run in Playwright's UI mode
