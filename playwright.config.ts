@@ -1,9 +1,11 @@
 import { defineConfig, devices } from '@playwright/test';
 
-//import dotenv from 'dotenv';
+import dotenv from 'dotenv';
+dotenv.config({ debug: false });
+
+import { json } from 'stream/consumers';
 // import path from 'path';
-// dotenv.config();
- 
+
 export default defineConfig({
  // timeout: 10000,
   testDir: './tests',
@@ -15,17 +17,26 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [
+    ['json', {outputFile: '/test-results/jsonResult.json'}],
+   // ["allure-playwright",]
+  ],
 
   /* Shared settings for all the projects. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
   // Base URL to use in actions like `await page.goto('/')`.
    // baseURL: 'http://localhost:3000',
-    baseURL: 'https://demo.nopcommerce.com/',
+  //  baseURL: 'https://demo.nopcommerce.com/',
+  //   baseURL: 'https://webapp-xgczr7dk5pfqs.azurewebsites.net/',
+
+    baseURL: process.env.BASE_URL,
+    headless: true,
+
+    screenshot: 'only-on-failure',
 
     trace: 'on-first-retry',
     actionTimeout: 5000,
-    navigationTimeout: 5000,
+    navigationTimeout: 10000,
     
   /*  contextOptions: {
       ignoreHTTPSErrors: true,
@@ -39,16 +50,15 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    {
+  /*  {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
-
+*/
     {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+    name: 'msedge',
+      use: { ...devices['Desktop Edge'], channel: 'msedge' },  
     },
-
     
   ],
 

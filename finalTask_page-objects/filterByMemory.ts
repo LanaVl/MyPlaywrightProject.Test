@@ -18,9 +18,9 @@ export class MemorySelection {
 
     async filteredByMemory(memorySize: string){
         const productsBefore = await this.productsOnPage.count();
-        await this.page.getByLabel(memorySize).check();
+        await this.page.getByRole('checkbox', {name: memorySize}).click();
+        await this.page.waitForLoadState('networkidle');
         const productsAfter = await this.productsOnPage.count();
-        await expect(productsAfter).toBeLessThan(productsBefore);
-        
+        await expect(productsAfter).toBeLessThan(productsBefore);  
     }
 }

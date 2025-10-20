@@ -5,7 +5,9 @@
  import { ProductSortedByPrice } from '../finalTask_page-objects/sortedByPrice';
  import { SortingByPositionOnPage } from '../finalTask_page-objects/positionOnPage';
  import { MemorySelection } from '../finalTask_page-objects/filterByMemory';
- import { SelectedCurrency } from '../finalTask_page-objects/Currency'
+ import { ProductInfo } from '../finalTask_page-objects/productInfo'; 
+ import { SelectedCurrency } from '../finalTask_page-objects/Currency';
+
  
  
  type MyFixtures = {
@@ -15,6 +17,7 @@
   sortedByPrice: ProductSortedByPrice;
   positionOnPage: SortingByPositionOnPage;
   memorySelection: MemorySelection;
+  productInfo: ProductInfo;
   selectedCurrency: SelectedCurrency;
 };
 
@@ -50,10 +53,15 @@
     await use(memory)
   },
 
+  productInfo: async({page}, use) => {
+    const info = new ProductInfo(page);
+    await use(info);
+  },
+
   selectedCurrency: async({page}, use) => {
     const currency = new SelectedCurrency(page);
-    await use(currency)
-  }
+    await use(currency);
+  } 
 });
 
 export { expect } from '@playwright/test';

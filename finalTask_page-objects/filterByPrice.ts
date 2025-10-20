@@ -30,6 +30,7 @@ export class FilterByPrice {
         ? this.sliderSelector.locator('span').first()
         : this.sliderSelector.locator('span').last();
 
+        // recalculation in pixels
       const moveBy = (slider.width * offsetPercent) / 100;
       console.log(`Moving ${side} slider by ${offsetPercent}% (${moveBy.toFixed(2)}px)`);
 

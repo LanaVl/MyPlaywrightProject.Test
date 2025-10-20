@@ -41,5 +41,11 @@
   "currency": {
     "euro": "Euro",
     "USD": "US Dollar"
+  },
+
+  "notebooks": {
+    "apple": "Apple MacBook Pro",
+    "asus": "Asus Laptop",    
+    "samsung": "Samsung Premium Ultrabook"   
   }
 }

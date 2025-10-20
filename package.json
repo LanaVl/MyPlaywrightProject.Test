@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test tests/finalTask.spec.ts --project=chromium --project=firefox --workers=2 --headed",
+    "testSuite1": "playwright test tests/finalTask.spec.ts --project=chromium --project=msedge --workers=2 --headed",
+    "testSuite2": "playwright test tests/fT.notebooks.spec.ts --project=chromium --project=msedge --workers=2 --headed",
+    "allTests": "playwright test tests/finalTask.spec.ts & tests/fT.notebooks.spec.ts --project=chromium --project=msedge --workers=2 --ui",
     "test:ui": "playwright test --ui",
-    "report": "npx playwright show-report"
+    "report": "npx playwright show-report --port=9324",
+    "test:clean": "rm -rf playwright-report && npx playwright test",
+    "test:report": "npx playwright test && npx playwright show-report --output=playwright-report"
   },
   "keywords": [],
   "author": "",
@@ -14,10 +18,11 @@
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.55.0",
-    "@types/node": "^24.5.2"
+    "@types/node": "^24.5.2",
+    "allure-playwright": "^3.4.1"
   },
   "dependencies": {
-    "dotenv": "^17.2.3",
+    "dotenv": "^16.3.1",
     "force": "^0.0.3",
     "save-dev": "^0.0.1-security"
   }

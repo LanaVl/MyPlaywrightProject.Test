@@ -13,7 +13,6 @@ this.currencySelector = page.locator('#customerCurrency');
 async selectCurrency(value: string){
     const actualCurrency = await this.page.locator('.prices .price.actual-price').first().textContent();
     await this.currencySelector.selectOption(value);
-    await this.page.waitForLoadState('networkidle');
     if(value === "Euro"){
         expect(actualCurrency).toContain('€');}
     else {

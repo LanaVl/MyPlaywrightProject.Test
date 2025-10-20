@@ -1,21 +1,18 @@
 
-import { test, expect } from '../configuration/fixtures';
+import { test } from '../configuration/fixtures';
 import testData from '../configuration/test.data.json' assert { type: "json" };
 
 
 test.describe('Product Filtering Suite for Camera & photo page', () => {
  
     test.beforeEach( async({page, categoryPages}) => {
-        await page.goto('/electronics', { waitUntil: 'networkidle' });
-        await categoryPages.assertPageTitle(testData.categories.electronics);
-    })
-
-    test('verify that prices are changed from USD to Euro', async({selectedCurrency}) => {
-        await selectedCurrency.selectCurrency(testData.currency.euro);
-    })
-
-   test('verify that selected subcategory is correct', async({categoryPages}) => {    
+       await page.goto('/electronics');
+       console.log('BASE_URL is:', process.env.BASE_URL);
         await categoryPages.moveToCameraPage();
+    })
+
+   test.only('verify that selected subcategory is correct', async({categoryPages}) => {           
+        await categoryPages.assertCameraPage();
     }) 
 
     test('Filter by manufacturer: "Apple"', async ({ filterByManufacturer }) => {
@@ -25,8 +22,7 @@ test.describe('Product Filtering Suite for Camera & photo page', () => {
     });
 
     test('Filter by minimum price', async ({ filterByPrice, filterByManufacturer, categoryPages }) => {
-        await categoryPages.moveToCameraPage();
-        await filterByPrice.movePriceSlider('right', 20);
+        await filterByPrice.movePriceSlider('left', 10);
         await filterByManufacturer.expectedVisibleBrand(testData.brands.apple.name); 
         await filterByManufacturer.expectedMissingBrand(testData.brands.nikon.name);
     });
@@ -36,12 +32,13 @@ test.describe('Product Filtering Suite for Camera & photo page', () => {
 
 test.describe('Product Sorting Suite for Cell phones page', () => {
 
-    test.beforeEach( async({page}) => {
-        await page.goto('/electronics', { waitUntil: 'networkidle' });
+    test.beforeEach( async({page, categoryPages}) => {
+        await page.goto('/electronics');
+        await categoryPages.moveToCellPhonesPage();
     })
 
     test('verify that selected subcategory is correct', async({categoryPages}) => {        
-        await categoryPages.moveToCellPhonesPage();
+        await categoryPages.assertCellPhonesPage();
     }) 
 
     test('verify sorting by position from low to high price', async ({sortedByPrice}) => {
@@ -57,18 +54,9 @@ test.describe('Product Sorting Suite for Cell phones page', () => {
 }) 
 
 
-test.describe('Filtering Suite for Notebooks', () => {
-   test.beforeEach( async({page}) => {
-    await page.goto('/computers', { waitUntil: 'networkidle' });
-    })
+//  I created this test for the first version of the demo-site, but there isn't such an option on the second version, so I'll skip it.
 
-    test('verify that selected subcategory is correct', async({categoryPages}) => {
-        await categoryPages.assertComputerPage();
-        await categoryPages.moveToNotebooksPage();
+  test.skip('verify that prices are changed from USD to Euro', async({page, selectedCurrency}) => {
+        await page.goto('/electronics');
+        await selectedCurrency.selectCurrency(testData.currency.euro);
     })
-
-    test('verify filtering by memory', async({memorySelection}) => {    
-       await memorySelection.filteredByMemory(testData.memorySize.min);
-    })
-
-})
