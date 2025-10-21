@@ -27,9 +27,9 @@
   },
 
   "positionOnPage": {
-    "Three": "3",
-    "Six": "6",
-    "Nine": "9"
+    "three": "3",
+    "six": "6",
+    "nine": "9"
   },
 
   "memorySize": {

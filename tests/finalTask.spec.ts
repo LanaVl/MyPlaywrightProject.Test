@@ -7,11 +7,10 @@ test.describe('Product Filtering Suite for Camera & photo page', () => {
  
     test.beforeEach( async({page, categoryPages}) => {
        await page.goto('/electronics');
-       console.log('BASE_URL is:', process.env.BASE_URL);
-        await categoryPages.moveToCameraPage();
+       await categoryPages.moveToCameraPage();
     })
 
-   test.only('verify that selected subcategory is correct', async({categoryPages}) => {           
+   test('verify that selected subcategory is correct', async({categoryPages}) => {           
         await categoryPages.assertCameraPage();
     }) 
 
@@ -21,7 +20,7 @@ test.describe('Product Filtering Suite for Camera & photo page', () => {
         await filterByManufacturer.expectedMissingBrand(testData.brands.nikon.name);
     });
 
-    test('Filter by minimum price', async ({ filterByPrice, filterByManufacturer, categoryPages }) => {
+    test('Filter by minimum price', async ({ filterByPrice, filterByManufacturer }) => {
         await filterByPrice.movePriceSlider('left', 10);
         await filterByManufacturer.expectedVisibleBrand(testData.brands.apple.name); 
         await filterByManufacturer.expectedMissingBrand(testData.brands.nikon.name);
@@ -47,7 +46,7 @@ test.describe('Product Sorting Suite for Cell phones page', () => {
         })
 
     test('verify displaying three products per page', async ({positionOnPage}) => {
-        await positionOnPage.selectNumberPerPage(testData.positionOnPage.Three);
+        await positionOnPage.selectNumberPerPage(testData.positionOnPage.three);
         await positionOnPage.expectProductCount(3);
     })
 

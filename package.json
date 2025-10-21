@@ -5,11 +5,11 @@
   "scripts": {
     "testSuite1": "playwright test tests/finalTask.spec.ts --project=chromium --project=msedge --workers=2 --headed",
     "testSuite2": "playwright test tests/fT.notebooks.spec.ts --project=chromium --project=msedge --workers=2 --headed",
-    "allTests": "playwright test tests/finalTask.spec.ts & tests/fT.notebooks.spec.ts --project=chromium --project=msedge --workers=2 --ui",
-    "test:ui": "playwright test --ui",
+    "allTests": "playwright test tests --project=chromium --project=msedge --workers=2 --ui",
+    "test:ui": "playwright test --project=chromium --project=msedge --ui",
     "report": "npx playwright show-report --port=9324",
-    "test:clean": "rm -rf playwright-report && npx playwright test",
-    "test:report": "npx playwright test && npx playwright show-report --output=playwright-report"
+    "test:allure": "npx playwright test && npx allure generate allure-results -o allure-report --clean && npx allure open allure-report",
+    "test:clean": "rm -rf playwright-report && npx playwright test"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
   "devDependencies": {
     "@playwright/test": "^1.55.0",
     "@types/node": "^24.5.2",
+    "allure-commandline": "^2.34.1",
     "allure-playwright": "^3.4.1"
   },
   "dependencies": {

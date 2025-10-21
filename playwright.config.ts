@@ -18,16 +18,15 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
-    ['json', {outputFile: '/test-results/jsonResult.json'}],
-   // ["allure-playwright",]
+    ['line'],
+    ['allure-playwright']
   ],
 
   /* Shared settings for all the projects. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
   // Base URL to use in actions like `await page.goto('/')`.
-   // baseURL: 'http://localhost:3000',
   //  baseURL: 'https://demo.nopcommerce.com/',
-  //   baseURL: 'https://webapp-xgczr7dk5pfqs.azurewebsites.net/',
+  //  baseURL: 'https://webapp-xgczr7dk5pfqs.azurewebsites.net/',
 
     baseURL: process.env.BASE_URL,
     headless: true,
@@ -50,11 +49,6 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-  /*  {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-*/
     {
     name: 'msedge',
       use: { ...devices['Desktop Edge'], channel: 'msedge' },  

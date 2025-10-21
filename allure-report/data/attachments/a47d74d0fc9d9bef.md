@@ -1,0 +1,359 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - status
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - link "Skip navigation" [ref=e4] [cursor=pointer]:
+        - /url: "#main"
+      - list [ref=e8]:
+        - listitem [ref=e9]:
+          - link "Register" [ref=e10] [cursor=pointer]:
+            - /url: /register?returnUrl=%2Fcell-phones
+        - listitem [ref=e11]:
+          - link "Log in" [ref=e12] [cursor=pointer]:
+            - /url: /login?returnUrl=%2Fcell-phones
+        - listitem [ref=e13]:
+          - link "Wishlist (0)" [ref=e14] [cursor=pointer]:
+            - /url: /wishlist
+            - generic [ref=e15] [cursor=pointer]: Wishlist
+            - generic [ref=e16] [cursor=pointer]: (0)
+        - listitem [ref=e17]:
+          - link "Shopping cart (0)" [ref=e18] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=e19] [cursor=pointer]: Shopping cart
+            - generic [ref=e20] [cursor=pointer]: (0)
+      - generic [ref=e21]:
+        - link "Your store name" [ref=e23] [cursor=pointer]:
+          - /url: /
+          - img "Your store name" [ref=e24] [cursor=pointer]
+        - generic [ref=e26]:
+          - textbox "Search store" [ref=e27]
+          - button "Search" [ref=e28] [cursor=pointer]
+    - list [ref=e30]:
+      - listitem [ref=e31]:
+        - link "Computers" [ref=e32] [cursor=pointer]:
+          - /url: /computers
+      - listitem [ref=e33]:
+        - link "Electronics" [ref=e34] [cursor=pointer]:
+          - /url: /electronics
+      - listitem [ref=e35]:
+        - link "Apparel" [ref=e36] [cursor=pointer]:
+          - /url: /apparel
+      - listitem [ref=e37]:
+        - link "Digital downloads" [ref=e38] [cursor=pointer]:
+          - /url: /digital-downloads
+      - listitem [ref=e39]:
+        - link "Books" [ref=e40] [cursor=pointer]:
+          - /url: /books
+      - listitem [ref=e41]:
+        - link "Jewelry" [ref=e42] [cursor=pointer]:
+          - /url: /jewelry
+      - listitem [ref=e43]:
+        - link "Gift Cards" [ref=e44] [cursor=pointer]:
+          - /url: /gift-cards
+    - main [ref=e45]:
+      - generic [ref=e46]:
+        - list [ref=e48]:
+          - listitem [ref=e49]:
+            - link "Home" [ref=e50] [cursor=pointer]:
+              - /url: /
+            - generic [ref=e51]: /
+          - listitem [ref=e52]:
+            - link "Electronics" [ref=e53] [cursor=pointer]:
+              - /url: /electronics
+              - generic [ref=e54] [cursor=pointer]: Electronics
+            - generic [ref=e55]: /
+          - listitem [ref=e56]:
+            - strong [ref=e57]: Cell phones
+        - generic [ref=e58]:
+          - generic [ref=e59]:
+            - strong [ref=e61]: Categories
+            - list [ref=e63]:
+              - listitem [ref=e64]:
+                - link "Computers" [ref=e65] [cursor=pointer]:
+                  - /url: /computers
+              - listitem [ref=e66]:
+                - link "Electronics" [ref=e67] [cursor=pointer]:
+                  - /url: /electronics
+                - list [ref=e68]:
+                  - listitem [ref=e69]:
+                    - link "Camera & photo" [ref=e70] [cursor=pointer]:
+                      - /url: /camera-photo
+                  - listitem [ref=e71]:
+                    - link "Cell phones" [ref=e72] [cursor=pointer]:
+                      - /url: /cell-phones
+                  - listitem [ref=e73]:
+                    - link "Others" [ref=e74] [cursor=pointer]:
+                      - /url: /others
+              - listitem [ref=e75]:
+                - link "Apparel" [ref=e76] [cursor=pointer]:
+                  - /url: /apparel
+              - listitem [ref=e77]:
+                - link "Digital downloads" [ref=e78] [cursor=pointer]:
+                  - /url: /digital-downloads
+              - listitem [ref=e79]:
+                - link "Books" [ref=e80] [cursor=pointer]:
+                  - /url: /books
+              - listitem [ref=e81]:
+                - link "Jewelry" [ref=e82] [cursor=pointer]:
+                  - /url: /jewelry
+              - listitem [ref=e83]:
+                - link "Gift Cards" [ref=e84] [cursor=pointer]:
+                  - /url: /gift-cards
+          - generic [ref=e85]:
+            - strong [ref=e87]: Manufacturers
+            - generic [ref=e88]:
+              - list [ref=e89]:
+                - listitem [ref=e90]:
+                  - link "Apple" [ref=e91] [cursor=pointer]:
+                    - /url: /apple
+                - listitem [ref=e92]:
+                  - link "HP" [ref=e93] [cursor=pointer]:
+                    - /url: /hp
+              - link "View all" [ref=e95] [cursor=pointer]:
+                - /url: /manufacturer/all
+          - generic [ref=e96]:
+            - strong [ref=e98]: Popular tags
+            - generic [ref=e99]:
+              - list [ref=e101]:
+                - listitem [ref=e102]:
+                  - link "apparel" [ref=e103] [cursor=pointer]:
+                    - /url: /apparel-2
+                - listitem [ref=e104]:
+                  - link "awesome" [ref=e105] [cursor=pointer]:
+                    - /url: /awesome
+                - listitem [ref=e106]:
+                  - link "book" [ref=e107] [cursor=pointer]:
+                    - /url: /book
+                - listitem [ref=e108]:
+                  - link "camera" [ref=e109] [cursor=pointer]:
+                    - /url: /camera
+                - listitem [ref=e110]:
+                  - link "cell" [ref=e111] [cursor=pointer]:
+                    - /url: /cell
+                - listitem [ref=e112]:
+                  - link "compact" [ref=e113] [cursor=pointer]:
+                    - /url: /compact
+                - listitem [ref=e114]:
+                  - link "computer" [ref=e115] [cursor=pointer]:
+                    - /url: /computer
+                - listitem [ref=e116]:
+                  - link "cool" [ref=e117] [cursor=pointer]:
+                    - /url: /cool
+                - listitem [ref=e118]:
+                  - link "digital" [ref=e119] [cursor=pointer]:
+                    - /url: /digital
+                - listitem [ref=e120]:
+                  - link "game" [ref=e121] [cursor=pointer]:
+                    - /url: /game
+                - listitem [ref=e122]:
+                  - link "jeans" [ref=e123] [cursor=pointer]:
+                    - /url: /jeans
+                - listitem [ref=e124]:
+                  - link "jewelry" [ref=e125] [cursor=pointer]:
+                    - /url: /jewelry-2
+                - listitem [ref=e126]:
+                  - link "nice" [ref=e127] [cursor=pointer]:
+                    - /url: /nice
+                - listitem [ref=e128]:
+                  - link "shirt" [ref=e129] [cursor=pointer]:
+                    - /url: /shirt
+                - listitem [ref=e130]:
+                  - link "shoes" [ref=e131] [cursor=pointer]:
+                    - /url: /shoes-2
+              - link "View all" [ref=e133] [cursor=pointer]:
+                - /url: /producttag/all
+        - generic [ref=e135]:
+          - heading "Cell phones" [level=1] [ref=e137]
+          - generic [ref=e138]:
+            - generic [ref=e139]:
+              - generic [ref=e140]:
+                - link "Grid" [ref=e141] [cursor=pointer]:
+                  - /url: "#"
+                - link "List" [ref=e142] [cursor=pointer]:
+                  - /url: "#"
+              - generic [ref=e143]:
+                - generic [ref=e144]: Sort by
+                - combobox "Select product sort order" [ref=e145]:
+                  - option "Position" [selected]
+                  - 'option "Name: A to Z"'
+                  - 'option "Name: Z to A"'
+                  - 'option "Price: Low to High"'
+                  - 'option "Price: High to Low"'
+                  - option "Created on"
+              - generic [ref=e146]:
+                - generic [ref=e147]: Display
+                - combobox "Select number of products per page" [ref=e148]:
+                  - option "3"
+                  - option "6" [selected]
+                  - option "9"
+                - generic [ref=e149]: per page
+            - generic [ref=e153]:
+              - generic [ref=e155]:
+                - link "Picture of Apple iPhone 16 128GB" [ref=e157] [cursor=pointer]:
+                  - /url: /apple-iphone-16-128gb
+                  - img "Picture of Apple iPhone 16 128GB"
+                - generic [ref=e158]:
+                  - heading "Apple iPhone 16 128GB" [level=2] [ref=e159]:
+                    - link "Apple iPhone 16 128GB" [ref=e160] [cursor=pointer]:
+                      - /url: /apple-iphone-16-128gb
+                  - generic [ref=e164]:
+                    - generic [ref=e166]: $799.00
+                    - generic [ref=e167]:
+                      - button "Add to cart" [ref=e168] [cursor=pointer]
+                      - button "Add to compare list" [ref=e169] [cursor=pointer]
+                      - button "Add to wishlist" [ref=e170] [cursor=pointer]
+              - generic [ref=e172]:
+                - link "Picture of HTC One Mini Blue" [ref=e174] [cursor=pointer]:
+                  - /url: /htc-one-mini-blue
+                  - img "Picture of HTC One Mini Blue"
+                - generic [ref=e175]:
+                  - heading "HTC One Mini Blue" [level=2] [ref=e176]:
+                    - link "HTC One Mini Blue" [ref=e177] [cursor=pointer]:
+                      - /url: /htc-one-mini-blue
+                  - generic [ref=e181]:
+                    - generic [ref=e183]: $100.00
+                    - generic [ref=e184]:
+                      - button "Add to cart" [ref=e185] [cursor=pointer]
+                      - button "Add to compare list" [ref=e186] [cursor=pointer]
+                      - button "Add to wishlist" [ref=e187] [cursor=pointer]
+              - generic [ref=e189]:
+                - link "Picture of HTC smartphone" [ref=e191] [cursor=pointer]:
+                  - /url: /htc-smartphone
+                  - img "Picture of HTC smartphone"
+                - generic [ref=e192]:
+                  - heading "HTC smartphone" [level=2] [ref=e193]:
+                    - link "HTC smartphone" [ref=e194] [cursor=pointer]:
+                      - /url: /htc-smartphone
+                  - generic [ref=e198]:
+                    - generic [ref=e200]: $245.00
+                    - generic [ref=e201]:
+                      - button "Add to cart" [ref=e202] [cursor=pointer]
+                      - button "Add to compare list" [ref=e203] [cursor=pointer]
+                      - button "Add to wishlist" [ref=e204] [cursor=pointer]
+              - generic [ref=e206]:
+                - link "Picture of Nokia Lumia 1020" [ref=e208] [cursor=pointer]:
+                  - /url: /nokia-lumia-1020
+                  - img "Picture of Nokia Lumia 1020"
+                - generic [ref=e209]:
+                  - heading "Nokia Lumia 1020" [level=2] [ref=e210]:
+                    - link "Nokia Lumia 1020" [ref=e211] [cursor=pointer]:
+                      - /url: /nokia-lumia-1020
+                  - generic [ref=e214]:
+                    - generic [ref=e216]: $349.00
+                    - generic [ref=e217]:
+                      - button "Add to cart" [ref=e218] [cursor=pointer]
+                      - button "Add to compare list" [ref=e219] [cursor=pointer]
+                      - button "Add to wishlist" [ref=e220] [cursor=pointer]
+              - generic [ref=e222]:
+                - link "Picture of Samsung Galaxy S24 256GB" [ref=e224] [cursor=pointer]:
+                  - /url: /samsung-galaxy-s24-256gb
+                  - img "Picture of Samsung Galaxy S24 256GB"
+                - generic [ref=e225]:
+                  - heading "Samsung Galaxy S24 256GB" [level=2] [ref=e226]:
+                    - link "Samsung Galaxy S24 256GB" [ref=e227] [cursor=pointer]:
+                      - /url: /samsung-galaxy-s24-256gb
+                  - generic [ref=e231]:
+                    - generic [ref=e233]: $859.00
+                    - generic [ref=e234]:
+                      - button "Add to cart" [ref=e235] [cursor=pointer]
+                      - button "Add to compare list" [ref=e236] [cursor=pointer]
+                      - button "Add to wishlist" [ref=e237] [cursor=pointer]
+    - generic [ref=e238]:
+      - generic [ref=e239]:
+        - generic [ref=e240]:
+          - strong [ref=e242]: Information
+          - list [ref=e243]:
+            - listitem [ref=e244]:
+              - link "Sitemap" [ref=e245] [cursor=pointer]:
+                - /url: /sitemap
+            - listitem [ref=e246]:
+              - link "Shipping & returns" [ref=e247] [cursor=pointer]:
+                - /url: /shipping-returns
+            - listitem [ref=e248]:
+              - link "Privacy notice" [ref=e249] [cursor=pointer]:
+                - /url: /privacy-notice
+            - listitem [ref=e250]:
+              - link "Conditions of Use" [ref=e251] [cursor=pointer]:
+                - /url: /conditions-of-use
+            - listitem [ref=e252]:
+              - link "About us" [ref=e253] [cursor=pointer]:
+                - /url: /about-us
+            - listitem [ref=e254]:
+              - link "Contact us" [ref=e255] [cursor=pointer]:
+                - /url: /contactus
+        - generic [ref=e256]:
+          - strong [ref=e258]: Customer service
+          - list [ref=e259]:
+            - listitem [ref=e260]:
+              - link "Search" [ref=e261] [cursor=pointer]:
+                - /url: /search
+            - listitem [ref=e262]:
+              - link "News" [ref=e263] [cursor=pointer]:
+                - /url: /news
+            - listitem [ref=e264]:
+              - link "Blog" [ref=e265] [cursor=pointer]:
+                - /url: /blog
+            - listitem [ref=e266]:
+              - link "Recently viewed products" [ref=e267] [cursor=pointer]:
+                - /url: /recentlyviewedproducts
+            - listitem [ref=e268]:
+              - link "Compare products list" [ref=e269] [cursor=pointer]:
+                - /url: /compareproducts
+            - listitem [ref=e270]:
+              - link "New products" [ref=e271] [cursor=pointer]:
+                - /url: /newproducts
+        - generic [ref=e272]:
+          - strong [ref=e274]: My account
+          - list [ref=e275]:
+            - listitem [ref=e276]:
+              - link "My account" [ref=e277] [cursor=pointer]:
+                - /url: /customer/info
+            - listitem [ref=e278]:
+              - link "Orders" [ref=e279] [cursor=pointer]:
+                - /url: /order/history
+            - listitem [ref=e280]:
+              - link "Addresses" [ref=e281] [cursor=pointer]:
+                - /url: /customer/addresses
+            - listitem [ref=e282]:
+              - link "Shopping cart" [ref=e283] [cursor=pointer]:
+                - /url: /cart
+            - listitem [ref=e284]:
+              - link "Wishlist" [ref=e285] [cursor=pointer]:
+                - /url: /wishlist
+            - listitem [ref=e286]:
+              - link "Apply for vendor account" [ref=e287] [cursor=pointer]:
+                - /url: /vendor/apply
+        - generic [ref=e288]:
+          - generic [ref=e289]:
+            - strong [ref=e291]: Follow us
+            - list [ref=e292]:
+              - listitem [ref=e293]:
+                - link "Facebook" [ref=e294] [cursor=pointer]:
+                  - /url: https://www.facebook.com/nopCommerce
+              - listitem [ref=e295]:
+                - link "Twitter" [ref=e296] [cursor=pointer]:
+                  - /url: https://twitter.com/nopCommerce
+              - listitem [ref=e297]:
+                - link "RSS" [ref=e298] [cursor=pointer]:
+                  - /url: /news/rss/1
+              - listitem [ref=e299]:
+                - link "YouTube" [ref=e300] [cursor=pointer]:
+                  - /url: https://www.youtube.com/user/nopCommerce
+              - listitem [ref=e301]:
+                - link "Instagram" [ref=e302] [cursor=pointer]:
+                  - /url: https://www.instagram.com/nopcommerce_official
+          - generic [ref=e303]:
+            - strong [ref=e305]: Newsletter
+            - generic [ref=e307]:
+              - textbox "Sign up for our newsletter" [ref=e308]
+              - button "Subscribe" [ref=e309] [cursor=pointer]
+      - generic [ref=e310]:
+        - generic [ref=e312]: Copyright © 2025 Your store name. All rights reserved.
+        - generic [ref=e313]:
+          - text: Powered by
+          - link "nopCommerce" [ref=e314] [cursor=pointer]:
+            - /url: https://www.nopcommerce.com/
+```

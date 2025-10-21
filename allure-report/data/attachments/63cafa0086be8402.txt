@@ -1,0 +1,1 @@
+Moving left slider by 10% (22.50px)

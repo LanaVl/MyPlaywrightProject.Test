@@ -1,19 +1,23 @@
 # My-Playwright-project
 
 This project was created as part of a **UI Automation Testing course** and serves as a demonstration of mastering the studied material.  
-The task was to develop a **Test Automation Framework** using **Playwright** with **TypeScript** as the programming language, following 
-industry best practices such as the **Page Object Model (POM)** design pattern.
+The task was to develop a **Test Automation Framework** using **Playwright** with **TypeScript** as the programming language, following industry best practices such as the **Page Object Model (POM)** design pattern.
 
 The main focus is on testing key functionalities of the demo web store:  
-🔹 Filtering and sorting products on [demo.nopcommerce.com](https://demo.nopcommerce.com)  
-🔹 Filtering by manufacturer and price  
-🔹 Sorting products by price and number of items per page  
-🔹 Verifying correct behavior
+Filtering and sorting products on [demo.nopcommerce.com](https://demo.nopcommerce.com)  
+🔹 Verifying the navigation to the correct product category
+🔹 Filtering by manufacturer
+🔹 Filtering by price  
+🔹 Filtering by memory size (for notebooks)  
+🔹 Sorting products on page by different options (e.g. by price from Low to High) 
+🔹 Sorting products by number of items per page  
+🔹 Verifying correct product info  
+
 
     My-Playwright-project/
 │
 ├── finalTask_page-objects/     # Page Object classes (CategoryPages, Filters, Sorting, etc.)
-├── configuration/              # Fixtures, test data, and configs
+├── configuration/              # Fixtures, test data
 ├── tests/                      # Test specifications
 ├── playwright.config.ts        # Playwright configuration file
 └── README.md                   # Project documentation
@@ -25,8 +29,9 @@ Installation process:
  Install node.js (recommended version 18 or later), for Windows: npm install
  Install Playwright browsers: npx playwright install
  
- Run tests with "npx playwright test" in the VS Code Terminal or open the Playwright UI Mode: "npx playwright test --ui" in browser
- To view test raport, use "npx playwright show-report"
+ Run tests with "npx playwright test" in the VS Code Terminal or open the Playwright UI Mode: "npx playwright test --ui" in browser. You can also use scripts from package.json, e.g. npm run testSuite1 
+
+ To view test report, use "npx playwright show-report --port=9324"  
 
 Software dependencies:
    "playwright": "^1.55.0",
