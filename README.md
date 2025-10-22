@@ -1,7 +1,8 @@
 # My-Playwright-project
 
 This project was created as part of a **UI Automation Testing course** and serves as a demonstration of mastering the studied material.  
-The task was to develop a **Test Automation Framework** using **Playwright** with **TypeScript** as the programming language, following industry best practices such as the **Page Object Model (POM)** design pattern.
+The task was to develop a **Test Automation Framework** using **Playwright** with **TypeScript** as the programming language, 
+following industry best practices such as the **Page Object Model (POM)** design pattern.
 
 The main focus is on testing key functionalities of the demo web store:  
 Filtering and sorting products on [demo.nopcommerce.com](https://demo.nopcommerce.com)  
@@ -14,12 +15,15 @@ Filtering and sorting products on [demo.nopcommerce.com](https://demo.nopcommerc
 🔹 Verifying correct product info  
 
 
-#My-Playwright-project/
-│
+# My-Playwright-project/
 ├── finalTask_page-objects/     # Page Object classes (CategoryPages, Filters, Sorting, etc.)
+
 ├── configuration/              # Fixtures, test data
+
 ├── tests/                      # Test specifications
+
 ├── playwright.config.ts        # Playwright configuration file
+
 └── README.md                   # Project documentation
 
 
@@ -29,7 +33,8 @@ Installation process:
  Install node.js (recommended version 18 or later), for Windows: npm install
  Install Playwright browsers: npx playwright install
  
- Run tests with "npx playwright test" in the VS Code Terminal or open the Playwright UI Mode: "npx playwright test --ui" in browser. To run tests and view the report in a browser, use the command npm run test:allure
+Run tests with "npx playwright test" in the VS Code Terminal or open the Playwright UI Mode: "npx playwright test --ui" 
+in browser. To run tests and view the report in a browser, use the command npm run test:allure
   
 Software dependencies:
    "playwright": "^1.55.0",
