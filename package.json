@@ -7,7 +7,6 @@
     "testSuite2": "playwright test tests/fT.notebooks.spec.ts --project=chromium --project=msedge --workers=2 --headed",
     "allTests": "playwright test tests --project=chromium --project=msedge --workers=2 --ui",
     "test:ui": "playwright test --project=chromium --project=msedge --ui",
-    "report": "npx playwright show-report --port=9324",
     "test:allure": "npx playwright test && npx allure generate allure-results -o allure-report --clean && npx allure open allure-report",
     "test:clean": "rm -rf playwright-report && npx playwright test"
   },

@@ -14,7 +14,7 @@ Filtering and sorting products on [demo.nopcommerce.com](https://demo.nopcommerc
 🔹 Verifying correct product info  
 
 
-    My-Playwright-project/
+#My-Playwright-project/
 │
 ├── finalTask_page-objects/     # Page Object classes (CategoryPages, Filters, Sorting, etc.)
 ├── configuration/              # Fixtures, test data
@@ -29,10 +29,8 @@ Installation process:
  Install node.js (recommended version 18 or later), for Windows: npm install
  Install Playwright browsers: npx playwright install
  
- Run tests with "npx playwright test" in the VS Code Terminal or open the Playwright UI Mode: "npx playwright test --ui" in browser. You can also use scripts from package.json, e.g. npm run testSuite1 
-
- To view test report, use "npx playwright show-report --port=9324"  
-
+ Run tests with "npx playwright test" in the VS Code Terminal or open the Playwright UI Mode: "npx playwright test --ui" in browser. To run tests and view the report in a browser, use the command npm run test:allure
+  
 Software dependencies:
    "playwright": "^1.55.0",
     "node": "^24.5.2"

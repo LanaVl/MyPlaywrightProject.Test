@@ -9,7 +9,6 @@
  import { SelectedCurrency } from '../finalTask_page-objects/Currency';
 
  
- 
  type MyFixtures = {
   categoryPages: CategoryPages;
   filterByPrice: FilterByPrice;
